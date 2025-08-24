@@ -20,13 +20,21 @@ jobs:
       - name: Install Pac-Man Generator
         run: npm install -g github-contribution-graph
 
+      - name: Verify Installation
+        run: |
+          which github-contribution-graph
+          github-contribution-graph --help
+
       - name: Generate Pac-Man Graph
         run: github-contribution-graph pacman.svg
+
+      - name: List Files (Debug)
+        run: ls -la
 
       - name: Commit and Push Pac-Man graph
         run: |
           git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add pacman.svg
           git commit -m "Update Pac-Man graph" || echo "No changes to commit"
           git push
