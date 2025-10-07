@@ -62,10 +62,3 @@
 </p>
 
 ---
-
-### 🎮 Fun Contribution Graph
-<p align="center">
-  <img src="./pacman.svg" alt="Pac-Man contribution graph"/>
-</p>
-
----
